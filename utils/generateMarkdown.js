@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license) {
-   return;
+   return [Guide to Licenses](https://choosealicense.com/);
  }
   else {
     return "";
@@ -41,6 +41,8 @@ function generateMarkdown(data) {
   ## ${data.description}
 
   ## License
+  renderLicenseSection();
+
   ## Badges
   ## Table of Contents
 - [Installation](#installation)
