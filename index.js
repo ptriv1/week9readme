@@ -51,6 +51,8 @@ function init() {
     .prompt(questions)
     .then(function(answers) {
       console.log(answers);
+      writeToFile(data);
+      fs.writeFile(path, markdown); 
     })
 }
 
