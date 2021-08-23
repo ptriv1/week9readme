@@ -50,7 +50,13 @@ function writeToFile('README.md', questions, (err) {
 });
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+  inquirer
+    .prompt(questions)
+    .then(function(answers) {
+      console.log(answers);
+    })
+}
 
 // Function call to initialize app
 init();

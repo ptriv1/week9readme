@@ -13,7 +13,7 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license) {
-   return [Guide to Licenses](https://choosealicense.com/);
+   return `[Guide to Licenses](https://choosealicense.com/)`;
  }
   else {
     return "";
@@ -25,8 +25,8 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
-    return `renderLicenseBadge()
-    renderLicenseLink()
+    return `${renderLicenseBadge()}
+    ${renderLicenseLink()}
     `;
   }
   else {
@@ -41,7 +41,7 @@ function generateMarkdown(data) {
   ## ${data.description}
 
   ## License
-  renderLicenseSection();
+  ${renderLicenseSection()}
 
   ## Badges
   ## Table of Contents
@@ -50,11 +50,14 @@ function generateMarkdown(data) {
 - [Credits](#credits)
 - [License](#license)
 ## Installation
+${data.installation}
 ## Usage
+${data.usage}
     ```md
     ![alt text](assets/images/screenshot.png)
     ```
 ## Credits
+${data.}
 ## License
 ## Badges
 ## Features
