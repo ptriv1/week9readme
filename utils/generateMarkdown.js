@@ -53,11 +53,9 @@ function generateMarkdown(data) {
 ${data.installation}
 ## Usage
 ${data.usage}
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+    
 ## Credits
-${data.}
+${data.contribution}
 ## License
 ## Badges
 ## Features
