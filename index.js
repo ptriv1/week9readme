@@ -43,7 +43,7 @@ const questions = [
 function writeToFile(data) {
   console.log("Data in writeFile function :- " + data);
   generateMarkdown(data);
-  fs.writeFile('path', data, function(err, result) {
+  fs.writeFile('path', generateMarkdown(data), function(err, result) {
     if (err) console.log('error', err);
   });
 }
