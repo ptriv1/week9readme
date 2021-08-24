@@ -18,6 +18,12 @@ const questions = [
     name: 'description'
   },
   {
+    type: 'input', 
+    message: 'What is your license?',
+    choices: ['MIT', 'Apache 2.0', 'GNU', 'None'],
+    name: 'licenseName'
+  },
+  {
     type: 'input',
     message: 'What do users need to do to install your project?',
     name: 'installation'
