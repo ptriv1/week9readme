@@ -40,7 +40,7 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(filename, data) {
+function writeToFile(data) {
   generateMarkdown(data);
   fs.writeFile('README.md', questions);
 }
