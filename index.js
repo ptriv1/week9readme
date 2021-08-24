@@ -41,9 +41,7 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(data) {
-  console.log("Data in writeFile function :- " + data);
-  generateMarkdown(data);
-  fs.writeFile('path', generateMarkdown(data), function(err, result) {
+  fs.writeFile('path.md', generateMarkdown(data), function(err, result) {
     if (err) console.log('error', err);
   });
 }
@@ -55,7 +53,6 @@ function init() {
     .then(function(answers) {
       console.log(answers);
       writeToFile(answers);
-      fs.writeFile(path, markdown); 
     });
 }
 
