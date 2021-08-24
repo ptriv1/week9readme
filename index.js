@@ -18,7 +18,7 @@ const questions = [
     name: 'description'
   },
   {
-    type: 'input', 
+    type: 'list',
     message: 'What is your license?',
     choices: ['MIT', 'Apache 2.0', 'GNU', 'None'],
     name: 'licenseName'
