@@ -38,7 +38,7 @@ function generateMarkdown(data) {
   console.log(data);
 
   return `# ${data.title}
-  
+
   ## ${data.description}
 
   ## Table of Contents
@@ -63,12 +63,15 @@ ${data.installation}
 ${data.usage}
     
 ## Credits
+
 ${data.contribution}
 
 ## Testing
+
 ${data.testing}
 
 ## Questions
+
 My GitHub username is ${data.username}, and my GitHub profile link is ${data.profile}.
 `;
 }
