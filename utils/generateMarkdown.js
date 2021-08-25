@@ -26,8 +26,10 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   if (license) {
-    return `${renderLicenseBadge()}
-    ${renderLicenseLink()}
+    return `${renderLicenseBadge(license)}
+    ${renderLicenseLink(license)}
+    
+    This project is covered under the ${data.licenseName} license.
     `;
   }
   else {
@@ -42,15 +44,17 @@ function generateMarkdown(data) {
   return `# ${data.title}
   ## ${data.description}
 
-  ## License
-  ${renderLicenseSection()}
-
-  ## Badges
   ## Table of Contents
+- [License](#license)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
-- [License](#license)
+- [Testing](#testing)
+- [Questions](#questions)
+
+## License
+${renderLicenseSection(data.licenseName)}
+
 ## Installation
 ${data.installation}
 ## Usage
@@ -58,12 +62,15 @@ ${data.usage}
     
 ## Credits
 ${data.contribution}
-## License
-## Badges
-## Features
-## How to Contribute
-## Tests
+
+## Testing
+${data.testing}
+
+## Questions
+My GitHub username is ${data.username}, and my GitHub profile link is ${data.profile}.
 `;
+
+
 }
 
 module.exports = generateMarkdown;

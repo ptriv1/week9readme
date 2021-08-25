@@ -42,6 +42,16 @@ const questions = [
     type: 'input',
     message: 'What do users need to do to test your project?',
     name: 'testing'
+  }, 
+  {
+    type: 'input',
+    message: 'What is your GitHub username?',
+    name: 'username'
+  },
+  {
+    type: 'input',
+    message: 'Enter a link to your GitHub profile.',
+    name: 'profile'
   }
 ];
 
